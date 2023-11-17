@@ -37,7 +37,7 @@ const Account = () => {
   useEffect(() => {
     setIsPending(true);
     let data = JSON.parse(localStorage.getItem("user"));
-    fetch("http://localhost:4000/api/v1/transactions/", {
+    fetch("https://cubank-services.vercel.app/api/v1/transactions/", {
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + data.token,
