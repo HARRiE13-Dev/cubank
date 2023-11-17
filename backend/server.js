@@ -48,14 +48,14 @@ app.use('/api/v1/transactions',transaction);
 app.use('/api/v1/auth',auth);
 
 
-// app.get('/', (req,res) => {
-//     // res.send("<h1>Hello from express</h1>");
-//     // res.send({name:"Brad"});
-//     // res.json({name:"Brad"});
-//     // res.sendStatus(400);
-//     // res.status(400).json({success:false});
-//      res.status(200).json({success:true, data:{id:1}});
-// });
+app.get('/', (req,res) => {
+    res.send("<h1>Hello from express</h1>");
+    res.send({name:"Brad"});
+    res.json({name:"Brad"});
+    res.sendStatus(400);
+    res.status(400).json({success:false});
+    //  res.status(200).json({success:true, data:{id:1}});
+});
 
 
 
