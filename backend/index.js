@@ -30,8 +30,8 @@ app.use(helmet());
 //Prevent XSS attacks
 app.use(xss());
 const corsOptions = {
-    origin: '*',
-    credentials: false,
+    origin: 'http://localhost:3001',
+    credentials: true,
   };
 //Enable CORS
 app.use(cors(corsOptions));

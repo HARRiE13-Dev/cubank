@@ -4,19 +4,15 @@ import authHeader from "./auth-header";
 const API_URL = "https://cubank-services.vercel.app/api/v1/auth/";
 
 const register = (user) => {
-  return axios.post(API_URL + "register", user, { withCredentials: true });
+  return axios.post(API_URL + "register", user);
 };
 
 const login = (accountId, password) => {
   return axios
-    .post(
-      API_URL + "login",
-      {
-        accountId,
-        password,
-      },
-      { withCredentials: false }
-    )
+    .post(API_URL + "login", {
+      accountId,
+      password,
+    })
     .then((response) => {
       if (response.data.token) {
         localStorage.setItem("user", JSON.stringify(response.data));
