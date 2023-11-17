@@ -2,6 +2,7 @@ import axios from "axios";
 import authHeader from "./auth-header";
 
 const API_URL = "https://cubank-service.vercel.app/api/v1/auth/";
+// const API_URL = "http://localhost:4000/api/v1/auth/";
 
 const register = (user) => {
   return axios.post(API_URL + "register", user);

@@ -30,9 +30,9 @@ app.use(helmet());
 //Prevent XSS attacks
 app.use(xss());
 const corsOptions = {
-  origin: "http://localhost:3001",
+  origin: "https://cubank.vercel.app/",
   optionsSuccessStatus: 200,
-  credentials: false,
+  credentials: true,
 };
 //Enable CORS
 app.use(cors(corsOptions));
