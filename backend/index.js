@@ -31,7 +31,7 @@ app.use(helmet());
 app.use(xss());
 const corsOptions = {
     origin: '*',
-    credentials: true,
+    credentials: false,
   };
 //Enable CORS
 app.use(cors(corsOptions));
